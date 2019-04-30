@@ -20,7 +20,7 @@
     </form>
     <p>The answer is:</p>
 <?php
-  include 'header.php';
+  include 'calculation.php';
  ?>
   </body>
 </html>

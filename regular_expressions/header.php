@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <?php
+<?php
     error_reporting(1); //removes error
     echo "<br>";
     $number = op1();
@@ -68,10 +61,12 @@
          function op8(){
            $form=$_GET['form'];
            if (preg_match("/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)/",$ok))
-           {echo "Its an email address";  echo"<br>";}
-           else
-           {echo "Its not an email address"; echo "<br>";}
+           {
+             echo "Its an email address";  echo"<br>";
            }
-      ?>
-  </body>
-</html>
+           else
+           echo "Its not an email address"; echo "<br>";
+           {
+           }
+         }
+?>

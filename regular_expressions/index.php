@@ -10,7 +10,6 @@
       <input type="submit" name="submit" placeholder="send"></input>
     </form>
     <?php
-    error_reporting(1);//removes error
     include('header.php');
      ?>
   </body>
