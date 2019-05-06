@@ -1,13 +1,17 @@
 <?php
-$name = "kevin__";
-if (isset($_POST['submit'])) {
-  $name = $_POST['name'];
-  $num = $_POST['num'];
-  $postal = $_POST['postal'];
-  $email = $_POST['email'];
-  $address = $_POST['address'];
-  $homeNum = $_POST['homeNum'];
+//$name = "kevin__";
+if (isset($_POST['submit'])){
+
+  $alphabet = alphaCheck();
+  $numeric = numericCheck();
+  $postal = postalCheck();
+  $phone = phoneCheck();
+  $mail = mailCheck();
+  $address = addressCheck();
+  $gender = genderCheck();
 }
+
+
 /*{
 echo "name is $name <br>";
 echo "number is $num<br>";

@@ -10,9 +10,9 @@
       <input autocomplete="off" type="text" name="alphabet" placeholder="Letters"><br>
       <p>Numeric check</p>
       <input autocomplete="off" type="text" name="Numeriek" placeholder="Nummers"><br>
-      <p>Dutch postalcode check</p>
+      <p>postalcode check</p>
       <input autocomplete="off" type="text" name="postal" placeholder="Postalcode"><br>
-      <p>Dutch mobilephone number check</p>
+      <p>mobilephone number check</p>
       <input autocomplete="off" type="text" name="mobilephone" placeholder="mobilephone number">
       <p>E-mail check</p>
       <input autocomplete="off" type="text" name="mail" placeholder="E-mail"><br>
