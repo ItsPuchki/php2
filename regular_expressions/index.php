@@ -9,11 +9,11 @@
       <p>Alphabet check</p>
       <input autocomplete="off" type="text" name="alphabet" placeholder="Letters"><br>
       <p>Numeric check</p>
-      <input autocomplete="off" type="text" name="Numeriek" placeholder="Nummers"><br>
+      <input autocomplete="off" type="text" name="Numeric" placeholder="Nummers"><br>
       <p>postalcode check</p>
       <input autocomplete="off" type="text" name="postal" placeholder="Postalcode"><br>
       <p>mobilephone number check</p>
-      <input autocomplete="off" type="text" name="mobilephone" placeholder="mobilephone number">
+      <input autocomplete="off" type="text" name="phone" placeholder="phone number">
       <p>E-mail check</p>
       <input autocomplete="off" type="text" name="mail" placeholder="E-mail"><br>
       <p>Address check</p>
