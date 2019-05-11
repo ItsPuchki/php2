@@ -5,29 +5,12 @@
     <title></title>
   </head>
   <body>
-    <form action="index.php" method="post">
-      <p>Alphabet check</p>
-      <input autocomplete="off" type="text" name="alphabet" placeholder="Letters"><br>
-      <p>Numeric check</p>
-      <input autocomplete="off" type="text" name="Numeric" placeholder="Nummers"><br>
-      <p>postalcode check</p>
-      <input autocomplete="off" type="text" name="postal" placeholder="Postalcode"><br>
-      <p>mobilephone number check</p>
-      <input autocomplete="off" type="text" name="phone" placeholder="phone number">
-      <p>E-mail check</p>
-      <input autocomplete="off" type="text" name="mail" placeholder="E-mail"><br>
-      <p>Address check</p>
-      <input autocomplete="off" type="text" name="address" placeholder="Address"><br>
-      <button type="submit" name="submit">submit</button>
-      <p>Gender check</p>
-      <select name="gender">
-        <option value="men">Men</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select><br>
+    <form type="get">
+      <input type="text" name="true" placeholder="Enter something">
+      <input type="submit" name="submit" placeholder="Send"></input>
     </form>
     <?php
-    error_reporting(0);
+    //error_reporting(1);
     include('check.php');
      ?>
   </body>

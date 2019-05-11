@@ -2,17 +2,32 @@
 //$name = "kevin__";
 if (isset($_POST['submit'])){
 
-  $alphabet = alphaCheck();
-  $numeric = numericCheck();
-  $postal = postalCheck();
-  $phone = phoneCheck();
-  $mail = mailCheck();
-  $address = addressCheck();
-  $gender = genderCheck();
-}
 
+  $alphabet = alphaCheck();
 function alphaCheck(){
-  $true = $_POST['alphabet'];
+  $true = $_GET['true'];
+  if (preg_match_all("/[a-zA-Z]/",$true)){
+    echo "Only alphabets detected!<br>";
+  }
+    else {
+      echo "There are other characters detected";
+  }
+};
+
+$numeric = numericCheck();
+function numericCheck(){
+  $true = $_GET['numeric'];
+  if (is_numeric($true)){
+    echo "Only numerical detected!<br>";
+  }
+    else {
+      echo "There are other characters detected";
+  }
+};
+
+$postal = postalCheck();
+function postalCheck(){
+  $true = $_GET['postal'];
   if (preg_match_all("//",$true)){
     echo "Only alphabets detected!<br>";
   }
@@ -20,54 +35,43 @@ function alphaCheck(){
       echo "There are other characters detected";
   }
 }
-function numericCheck(){
-  $true1 = $_POST['numeric'];
-  if (numeric($true1)){
-    echo "Only numerical detected!<br>";
-  }
-    else {
-      echo "There are other characters detected";
-  }
-}
-function postalCheck(){
-  $true2 = $_POST['postal'];
-  if (postal($true2)){
-    echo "Only alphabets detected!<br>";
-  }
-    else {
-      echo "There are other characters detected";
-  }
-}
+$phone = phoneCheck();
 function phoneCheck(){
-  $true3 = $_POST['phone'];
-  if (phone($true3)){
+  $true = $_GET['phone'];
+  if (preg_match_all("/^(((0)[1-9]{2}[0-9][-]?[1-9][0-9]{5})|((\\+31|0|0031)[1-9][0-9][-]?[1-9][0-9]{6}))$/",$true3)){
     echo "Phone number detected!<br>";
   }
     else {
-      echo "This is not a dutch phone number";
+      echo "This is not a (dutch) phone number";
   }
-}
+};
+
+$mail = mailCheck();
 function mailCheck(){
-  $true4 = $_POST['mail'];
-  if (mail($true4)){
+  $true = $_GET['mail'];
+  if (preg_match_all("//",$true)){
     echo "E-mail detected!<br>";
   }
     else {
       echo "This is not a e-mail";
   }
-}
+};
+
+$address = addressCheck();
 function addressCheck(){
-  $true5 = $_POST['Address'];
-  if (Address($true5)){
+  $true = $_GET['Address'];
+  if (preg_match_all("//",$true)){
     echo "Address detected!<br>";
   }
     else {
       echo "This is not an address!";
   }
-}
+};
+
+$gender = genderCheck();
 function genderCheck(){
-  $true6 = $_POST['gender'];
-  switch ($true6) {
+  $true = $_GET['gender'];
+  switch ($true) {
     case 'men':
     case 'female'
     echo "Men or female has been selected.";
@@ -78,6 +82,6 @@ function genderCheck(){
     default:
       echo "No gender";
     }
-  }
+  };
 }
 ?>
