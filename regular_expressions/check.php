@@ -2,7 +2,6 @@
 //$name = "kevin__";
 if (isset($_POST['submit'])){
 
-
   $alphabet = alphaCheck();
 function alphaCheck(){
   $true = $_GET['true'];
@@ -16,7 +15,7 @@ function alphaCheck(){
 
 $numeric = numericCheck();
 function numericCheck(){
-  $true = $_GET['numeric'];
+  $true = $_GET['true'];
   if (is_numeric($true)){
     echo "Only numerical detected!<br>";
   }
@@ -27,7 +26,7 @@ function numericCheck(){
 
 $postal = postalCheck();
 function postalCheck(){
-  $true = $_GET['postal'];
+  $true = $_GET['true'];
   if (preg_match_all("//",$true)){
     echo "Only alphabets detected!<br>";
   }
@@ -37,8 +36,8 @@ function postalCheck(){
 }
 $phone = phoneCheck();
 function phoneCheck(){
-  $true = $_GET['phone'];
-  if (preg_match_all("/^(((0)[1-9]{2}[0-9][-]?[1-9][0-9]{5})|((\\+31|0|0031)[1-9][0-9][-]?[1-9][0-9]{6}))$/",$true3)){
+  $true = $_GET['true'];
+  if (preg_match_all("/^(((0)[1-9]{2}[0-9][-]?[1-9][0-9]{5})|((\\+31|0|0031)[1-9][0-9][-]?[1-9][0-9]{6}))$/",$true)){
     echo "Phone number detected!<br>";
   }
     else {
@@ -48,7 +47,7 @@ function phoneCheck(){
 
 $mail = mailCheck();
 function mailCheck(){
-  $true = $_GET['mail'];
+  $true = $_GET['true'];
   if (preg_match_all("//",$true)){
     echo "E-mail detected!<br>";
   }
@@ -59,7 +58,7 @@ function mailCheck(){
 
 $address = addressCheck();
 function addressCheck(){
-  $true = $_GET['Address'];
+  $true = $_GET['true'];
   if (preg_match_all("//",$true)){
     echo "Address detected!<br>";
   }
@@ -70,7 +69,7 @@ function addressCheck(){
 
 $gender = genderCheck();
 function genderCheck(){
-  $true = $_GET['gender'];
+  $true = $_GET['true'];
   switch ($true) {
     case 'men':
     case 'female'
