@@ -7,10 +7,10 @@
   <body>
     <form type="get">
       <input type="text" name="true" placeholder="Enter something">
-      <input type="submit" name="submit" placeholder="Send"></input>
+      <button type="submit" name="submit">Send</button>
     </form>
     <?php
-    //error_reporting(1);
+    error_reporting(1);
     include('check.php');
      ?>
   </body>
