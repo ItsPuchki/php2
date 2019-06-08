@@ -1,29 +1,38 @@
 <?php
 //Fibonacci reeks is 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
-echo "De Fibonacci reeks is: ";
-function fibonacci($num){
+function Fibonacci($number){
 
 
-//variabelen een waarde geven
-  $num1 = 0;
-  $num2 = 1;
-  $output = 0;
+    if ($number == 0)
+        return 0;
+    else if ($number == 1)
+        return 1;
 
-//berekening uitvoeren
-  for ($x=0; $x <= $num; $x++) {
-
-    if ($x <= 1) {
-      $output = $x;
-    }
-    else {
-      $output = $num1 + $num2;
-      $num1 = $num2;
-      $num2 = $output;
-    }
-
-    //print uitkomst berekening met commas tussen elk getal
-    echo $output . ",";
-  }
+    else
+        return (Fibonacci($number-1) +
+                Fibonacci($number-2));
 }
-fibonacci(10)
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Recursive Fibonacci</title>
+</head>
+
+<body>
+  <p>Enter how many Fibonacci numbers you want:</p>
+<form action="" method="post">
+	Number(s):<input type="text" name="number" value="<?=$_POST['number']??''?>"><br>
+	<input type="submit" name="print" value="Print Fibonacci Numbers">
+</form>
+<?php
+
+if(isset($_POST["print"]))
+{
+	$number = $_POST["number"];
+	for ($counter = 0; $counter < $number; $counter++){
+		echo '<strong>'.Fibonacci($counter).'</strong> ';
+	}
+}
 ?>
